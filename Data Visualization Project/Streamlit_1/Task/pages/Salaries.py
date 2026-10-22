@@ -3,30 +3,13 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
+st.set_page_config('Salaries 💵↗️')
+
 csv_file = Path("/mount/src/ai_jobs/Data Visualization Project/ai_jobs_final.csv")
 
-root = Path(__file__).resolve().parents[3]
-
-st.write("Exists:", csv_file.exists())
-try:
-    df = pd.read_csv(csv_file)
-    st.write(df.head())
-except Exception as e:
-    st.exception(e)
-
-
-
-BASE_DIR = Path(__file__).resolve().parents[3]
-
-
-st.write("Current file:", csv_file)
-
 # df = pd.read_csv(r'C:\Users\hp\OneDrive\Desktop\Programming\Eng Mohammed\Data Visualization Project\ai_jobs_final.csv')
-
+BASE_DIR = Path(__file__).resolve().parents[3]
 df = pd.read_csv(csv_file)
-
-
-st.set_page_config('Salaries 💵↗️')
 
 st.markdown('<h2 style="color:lightgreen;background-color:grey;font-size:40px;text-align:center;">Average salaries for each industry<h2/>', unsafe_allow_html=True)
 

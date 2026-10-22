@@ -6,6 +6,14 @@ import plotly.express as px
 
 root = Path(__file__).resolve().parents[3]
 
+st.write("Exists:", csv_file.exists())
+try:
+    df = pd.read_csv(csv_file)
+    st.write(df.head())
+except Exception as e:
+    st.exception(e)
+
+
 st.write("Current file:", Path(__file__).resolve())
 st.write("Parent 1:", Path(__file__).resolve().parent)
 st.write("Parent 2:", Path(__file__).resolve().parents[1])

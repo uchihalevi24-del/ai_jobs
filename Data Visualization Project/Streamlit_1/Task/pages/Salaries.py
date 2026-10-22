@@ -6,6 +6,10 @@ import plotly.express as px
 
 root = Path(__file__).resolve().parents[3]
 
+st.write("Current file:", Path(__file__).resolve())
+st.write("Parent 1:", Path(__file__).resolve().parent)
+st.write("Parent 2:", Path(__file__).resolve().parents[1])
+st.write("Parent 3:", Path(__file__).resolve().parents[2])
 st.write("Root:", root)
 st.write("Files in root:")
 st.write(list(root.iterdir()))

@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-df = pd.read_csv(r'C:\Users\hp\OneDrive\Desktop\Programming\Eng Mohammed\Data Visualization Project\ai_jobs_final.csv')
+df = pd.read_csv(r'/Data Visualization Project / ai_jobs_final.csv')
 
 
 st.set_page_config('Main Page 🏠')

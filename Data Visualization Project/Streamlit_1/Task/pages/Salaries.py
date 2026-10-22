@@ -3,8 +3,12 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-from pathlib import Path
-import streamlit as st
+
+root = Path(__file__).resolve().parents[3]
+
+st.write("Root:", root)
+st.write("Files in root:")
+st.write(list(root.iterdir()))
 
 
 BASE_DIR = Path(__file__).resolve().parents[3]
@@ -13,8 +17,6 @@ csv_file = BASE_DIR / "ai_jobs_final.csv"
 st.write("Current file:", csv_file)
 
 # df = pd.read_csv(r'C:\Users\hp\OneDrive\Desktop\Programming\Eng Mohammed\Data Visualization Project\ai_jobs_final.csv')
-BASE_DIR = Path(__file__).resolve().parents[2]
-csv_file = BASE_DIR / "ai_jobs_final.csv"
 
 df = pd.read_csv(csv_file)
 

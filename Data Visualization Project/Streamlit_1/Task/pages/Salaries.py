@@ -6,7 +6,8 @@ import plotly.express as px
 from pathlib import Path
 import streamlit as st
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+
+BASE_DIR = Path(__file__).resolve().parents[3]
 csv_file = BASE_DIR / "ai_jobs_final.csv"
 
 st.write("Current file:", csv_file)
